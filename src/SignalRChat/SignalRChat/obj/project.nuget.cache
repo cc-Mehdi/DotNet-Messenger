@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r66NO3HhCa2tNvfsobqbP2+gAq5gaY+6Mt8uY/J/6ljgKhEA+pfeplJ6o0d+JgALh/hqquXoAAwVfXMMmQbrlA==",
+  "dgSpecHash": "eh6BWHJphjKrG3S85zy/vdApz8WIM577ss8UX0CPKR+Aucd/rWkOfWgYKPhNsGQTE4gIXyNRmIT2kec3QmSjDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cc-mehdi\\Desktop\\SignalRChat\\SignalRChat\\SignalRChat.csproj",
+  "projectFilePath": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\SignalRChat.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
