@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./../media/pages/chat.css">
+</head>
+
+<body>
+
+    <div class="container mx-auto px-4 flex justify-center">
+        <div class="xl:w-2/3 lg:w-3/4 w-screen h-screen flex flex-col justify-between">
+
+            <header class="flex items-center justify-between bg-blue-900 px-5 rounded-b-xl">
+                <div class="flex items-center p-3">
+                    <img src="https://tailus.io/sources/blocks/social/preview/images/icon.svg"
+                        class="rounded-full max-w-10 max-h-10" alt="user image">
+                    <div class="flex flex-col">
+                        <span class="text-xl text-white ms-3">Group Name</span>
+                        <span class="text-md font-bold text-blue-300 ms-3">Online</span>
+                    </div>
+                </div>
+                <div>
+                    <button class="rounded-full bg-cyan-500 shadow shadow-blue-300 p-1 hover:shadow-none transition">
+                        <i class="fa-solid fa-ellipsis text-white text-3xl w-9 h-9"></i>
+                    </button>
+                </div>
+            </header>
+
+            <main class="flex w-full h-3/4 overflow-auto">
+                <ul class="w-full">
+                    <li class="p-1 flex justify-start my-1">
+                        <span class="bg-blue-900 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-start my-1">
+                        <span class="bg-blue-900 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-end my-1">
+                        <span class="bg-cyan-500 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-start my-1">
+                        <span class="bg-blue-900 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-start my-1">
+                        <span class="bg-blue-900 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-end my-1">
+                        <span class="bg-cyan-500 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-start my-1">
+                        <span class="bg-blue-900 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-start my-1">
+                        <span class="bg-blue-900 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-end my-1">
+                        <span class="bg-cyan-500 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-start my-1">
+                        <span class="bg-blue-900 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-start my-1">
+                        <span class="bg-blue-900 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                    <li class="p-1 flex justify-end my-1">
+                        <span class="bg-cyan-500 text-white w-fit p-2 rounded-md">Hello World</span>
+                    </li>
+                </ul>
+            </main>
+
+            <footer class="bg-blue-900 p-5 rounded-t-xl">
+                <form class="w-full mx-auto">
+                    <div class="flex items-end space-x-2">
+                        <!-- Textarea for multiline input -->
+                        <div class="relative flex-grow">
+                            <!-- Icon on the left -->
+                            <div class="absolute inset-y-0 start-0 flex items-end pb-3 pl-3 pointer-events-none">
+                                <i class="fa-regular fa-comments text-gray-300 dark:text-white"></i>
+                            </div>
+
+                            <!-- Textarea -->
+                            <textarea id="message"
+                                class="block w-full p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 resize-none overflow-hidden"
+                                placeholder="Your Message" rows="1" oninput="autoResize(this)"></textarea>
+                        </div>
+
+                        <!-- Button to submit -->
+                        <button type="submit"
+                            class="mb-1 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                            <span>Send</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </footer>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Auto resize the textarea to expand with content
+        function autoResize(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = (textarea.scrollHeight) + 'px';
+        }
+    </script>
+</body>
+
+</html>
