@@ -257,6 +257,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\media\\global\\global.css",
+      "PackagePath": "staticwebassets\\media\\global\\global.css"
+    },
+    {
+      "Id": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\media\\global\\global.js",
+      "PackagePath": "staticwebassets\\media\\global\\global.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SignalRChat.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

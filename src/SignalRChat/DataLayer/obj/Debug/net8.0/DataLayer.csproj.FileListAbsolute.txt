@@ -1,0 +1,15 @@
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\bin\Debug\net8.0\DataLayer.deps.json
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\bin\Debug\net8.0\DataLayer.runtimeconfig.json
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\bin\Debug\net8.0\DataLayer.dll
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\bin\Debug\net8.0\DataLayer.pdb
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.csproj.AssemblyReference.cache
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfoInputs.cache
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfo.cs
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.sourcelink.json
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.dll
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\refint\DataLayer.dll
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.pdb
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\DataLayer.genruntimeconfig.cache
+C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\DataLayer\obj\Debug\net8.0\ref\DataLayer.dll

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9NvxX/zb4g0rV6Z0SJlAY4OyjDBY8QMbfYGOJLMhj8Y=",
+  "Hash": "GKiNJbznGZtmGjx3VhAqfothYiGz5FQ67zV9Ic/g7ug=",
   "Source": "SignalRChat",
   "BasePath": "_content/SignalRChat",
   "Mode": "Default",
@@ -1250,6 +1250,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\media\\global\\global.css",
+      "SourceId": "SignalRChat",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\",
+      "BasePath": "_content/SignalRChat",
+      "RelativePath": "media/global/global.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\global\\global.css"
+    },
+    {
+      "Identity": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\media\\global\\global.js",
+      "SourceId": "SignalRChat",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\",
+      "BasePath": "_content/SignalRChat",
+      "RelativePath": "media/global/global.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\global\\global.js"
     }
   ]
 }
