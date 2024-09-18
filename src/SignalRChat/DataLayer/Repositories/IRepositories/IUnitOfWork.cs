@@ -5,5 +5,6 @@
         public IUsersRepository UsersRepository { get; set; }
         public IMessagesRepository MessagesRepository { get; set; }
         void Save();
+        void SaveAsync();
     }
 }

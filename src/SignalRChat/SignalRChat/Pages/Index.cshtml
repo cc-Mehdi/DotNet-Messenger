@@ -28,7 +28,7 @@
                     @foreach (var message in Model.messagesList)
                     {
                         <li class="p-1 my-1 flex items-center">
-                            <img src="https://avatars.githubusercontent.com/u/57840939?v=4" lazy="loading" alt="user image"
+                            <img src="@message.Sender.PictureAddress" lazy="loading" alt="user image"
                                  class="max-w-14 max-h-14 me-3 rounded-full">
                             <div class="bg-blue-900 text-white p-2 flex w-fit flex-col rounded-md">
                                 <span class="text-blue-300 text-sm">@message.Sender.Username</span>

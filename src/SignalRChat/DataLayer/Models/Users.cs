@@ -5,6 +5,12 @@ namespace DataLayer.Models
 {
     public class Users
     {
+        public Users()
+        {
+            this.PublicId = Guid.NewGuid().ToString();
+            this.PictureAddress = "./Customers/UserImages/pic_profile_default.svg";
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -19,12 +25,11 @@ namespace DataLayer.Models
 
         [Display(Name = "Email")]
         [Required]
-        [Range(5, 300)]
         public string Email { get; set; }
 
         [Display(Name = "Password")]
         [Required]
-        [Range(5, 300)]
+        [MinLength(8, ErrorMessage = "Password must be minum 8 character")]
         public string Password { get; set; }
 
         [Display(Name = "Picture")]

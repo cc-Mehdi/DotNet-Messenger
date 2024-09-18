@@ -24,5 +24,10 @@ namespace DataLayer.Repositories
         {
             _db.SaveChanges();
         }
+
+        public async void SaveAsync()
+        {
+            await _db.SaveChangesAsync();
+        }
     }
 }

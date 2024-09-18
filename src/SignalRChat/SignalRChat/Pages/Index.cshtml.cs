@@ -10,17 +10,23 @@ namespace SignalRChat.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly IUnitOfWork _unitOfWork;
-        public IEnumerable<Messages> messagesList;
+        public List<Messages> messagesList;
 
         public IndexModel(ILogger<IndexModel> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
+            messagesList = new();
         }
 
         public void OnGet()
         {
-            messagesList = _unitOfWork.MessagesRepository.GetAll(new Expression<Func<Messages, object>>[] { m => m.Sender });
+            if (Request.Cookies["UserToken"] == null)
+            {
+                Response.Redirect("/Customer/Login");
+                return;
+            }
+            messagesList = _unitOfWork.MessagesRepository.GetAll(new Expression<Func<Messages, object>>[] { m => m.Sender }).ToList();
         }
     }
 }

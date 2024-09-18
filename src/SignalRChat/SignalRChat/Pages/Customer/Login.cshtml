@@ -1,0 +1,89 @@
+﻿@page
+@model SignalRChat.Pages.Customer.LoginModel
+@{
+}
+
+<div class="px-12 m-auto mx-auto sm:px-0 xl:container">
+    <div class="mx-auto h-full sm:w-max">
+        <div class="py-12 m-auto">
+            <div class="space-y-4">
+                <a href="" class="flex justify-items-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYNpkAqqd0zSUkd_E4EakSAOZWowr53twDaA&s"
+                         class="w-12" alt="Main Logo">
+                    <span class="ms-3 text-gray-700 flex items-center text-2xl font-semibold">SignalRChat</span>
+                </a>
+            </div>
+            <div class="mt-12 bg-gray-50 -mx-6 p-8 rounded-3xl border dark:border-gray-700 dark:bg-gray-800 sm:-mx-10 sm:p-10">
+                <h3 class="text-gray-700 text-2xl font-semibold dark:text-white">Login to your account</h3>
+                <div class="mt-12 gap-6 flex grid-cols-2 flex-wrap sm:grid">
+                    <button class="h-11 border-gray-300/75 bg-white px-6 w-full rounded-full border transition active:bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:border-gray-700">
+                        <div class="space-x-4 text-white mx-auto flex w-max items-center justify-center">
+                            <i class="fa-brands fa-google"></i>
+                            <span class="text-cyan-700 block w-max text-sm font-semibold tracking-wide dark:text-white">
+                                With
+                                Google
+                            </span>
+                        </div>
+                    </button>
+                    <button class="h-11 bg-gray-900 px-6 w-full rounded-full transition hover:bg-gray-800 focus:bg-gray-700 active:bg-gray-600 dark:bg-gray-700 dark:border dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:border-gray-700">
+                        <div class="space-x-4 text-white mx-auto flex w-max items-center justify-center">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="text-white block w-max text-sm font-semibold tracking-wide">
+                                With
+                                Github
+                            </span>
+                        </div>
+                    </button>
+                </div>
+
+                <form method="post" class="mt-10 space-y-8 dark:text-white">
+                    <div>
+                        <div class="relative before:absolute before:bottom-0 before:h-0.5 before:left-0 before:origin-right before:right-0 before:scale-x-0 before:m-auto before:bg-sky-400 before:transition before:duration-300 focus-within:before:origin-left focus-within:before:!scale-x-100 dark:before:bg-sky-800 focus-within:invalid:before:bg-red-400">
+                            <!-- Email Input Bound to User.Email -->
+                            <input asp-for="@Model.User.Email" type="email" placeholder="Email"
+                                   class="bg-transparent pb-3 border-gray-300 w-full border-b outline-none transition invalid:border-red-400 dark:placeholder-gray-300 dark:border-gray-600">
+                        </div>
+                        <span class="text-rose-400 text-md font-bold" asp-validation-for="@Model.User.Email"></span>
+                    </div>
+
+                    <div class="flex flex-col items-end">
+                        <div class="relative w-full before:absolute before:bottom-0 before:h-0.5 before:left-0 before:origin-right before:right-0 before:scale-x-0 before:m-auto before:bg-sky-400 before:transition before:duration-300 focus-within:before:origin-left focus-within:before:!scale-x-100 dark:before:bg-sky-800 focus-within:invalid:before:bg-red-400">
+                            <!-- Password Input Bound to User.Password -->
+                            <input asp-for="@Model.User.Password" type="password" placeholder="Password"
+                                   class="bg-transparent pb-3 border-gray-300 w-full border-b outline-none transition invalid:border-red-400 dark:placeholder-gray-300 dark:border-gray-600">
+                        </div>
+                        <span class="text-rose-400 text-md w-full font-bold" asp-validation-for="@Model.User.Password"></span>
+                        <button type="reset" class="-mr-3 p-3 w-max">
+                            <span class="text-sky-600 text-sm tracking-wide dark:text-sky-400">Forgot password?</span>
+                        </button>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="bg-sky-500 h-11 px-6 py-3 flex w-full items-center justify-center rounded-full transition hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-800 dark:bg-sky-400">
+                            <span class="text-white text-base font-semibold dark:text-gray-900">Login</span>
+                        </button>
+                        <button class="p-3 w-max">
+                            <a href="Register.html" class="p-0 m-0 text-sky-600 text-sm tracking-wide dark:text-sky-400">Create new account</a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="pt-12 text-gray-500 border-t dark:border-gray-800">
+                <div class="space-x-4 text-center">
+                    <span>&copy; SignalRChat</span>
+                    <a href="#" class="text-sm hover:text-sky-900 dark:hover:text-gray-300">Contact</a>
+                    <a href="#" class="text-sm hover:text-sky-900 dark:hover:text-gray-300">Privacy & Terms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <partial name="./../Shared/_ValidationScriptsPartial.cshtml" />
+}
