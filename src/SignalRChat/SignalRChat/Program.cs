@@ -1,4 +1,6 @@
 using DataLayer.Context;
+using DataLayer.Repositories;
+using DataLayer.Repositories.IRepositories;
 using Microsoft.EntityFrameworkCore;
 using SignalRChat.Hubs;
 
@@ -10,6 +12,8 @@ builder.Services.AddSignalR();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>(); 
 
 var app = builder.Build();
 

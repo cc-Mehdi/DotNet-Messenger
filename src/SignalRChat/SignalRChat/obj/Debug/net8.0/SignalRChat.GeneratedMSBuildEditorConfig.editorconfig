@@ -9,39 +9,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SignalRChat
 build_property.RootNamespace = SignalRChat
-build_property.ProjectDir = C:\Users\mehdi.gholami\Documents\Temp\DotNet-Messenger\src\SignalRChat\SignalRChat\
+build_property.ProjectDir = C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\SignalRChat\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\mehdi.gholami\Documents\Temp\DotNet-Messenger\src\SignalRChat\SignalRChat
+build_property.MSBuildProjectDirectory = C:\Users\cc-mehdi\Desktop\DotNet-Messenger\src\SignalRChat\SignalRChat
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/mehdi.gholami/Documents/Temp/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Error.cshtml]
+[C:/Users/cc-mehdi/Desktop/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mehdi.gholami/Documents/Temp/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Index.cshtml]
+[C:/Users/cc-mehdi/Desktop/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mehdi.gholami/Documents/Temp/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Privacy.cshtml]
+[C:/Users/cc-mehdi/Desktop/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mehdi.gholami/Documents/Temp/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/cc-mehdi/Desktop/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mehdi.gholami/Documents/Temp/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/_ViewImports.cshtml]
+[C:/Users/cc-mehdi/Desktop/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mehdi.gholami/Documents/Temp/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/_ViewStart.cshtml]
+[C:/Users/cc-mehdi/Desktop/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mehdi.gholami/Documents/Temp/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Shared/_Layout.cshtml]
+[C:/Users/cc-mehdi/Desktop/DotNet-Messenger/src/SignalRChat/SignalRChat/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qs0l4gmowu

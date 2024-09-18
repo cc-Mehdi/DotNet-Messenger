@@ -25,25 +25,43 @@ namespace DataLayer.Repositories
             _dbSet.Remove(entity);
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(Expression<Func<T, object>>[]? includes = null)
         {
             IQueryable<T> query = _dbSet;
+
+            // Apply the includes if provided
+            if(includes != null)
+                foreach (var include in includes)
+                    query = query.Include(include);
+
             return query.ToList();
         }
 
-        public IEnumerable<T> GetByFilter(Expression<Func<T, bool>>? filter = null)
+        public IEnumerable<T> GetByFilter(Expression<Func<T, bool>>? filter = null, Expression<Func<T, object>>[]? includes = null)
         {
             IQueryable<T> query = _dbSet;
+
+            if (includes != null)
+                foreach (var include in includes)
+                    query = query.Include(include);
+
             if (filter != null)
                 query = query.Where(filter);
+
             return query.ToList();
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null)
+        public T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null, Expression<Func<T, object>>[]? includes = null)
         {
             IQueryable<T> query = _dbSet;
+
+            if (includes != null)
+                foreach (var include in includes)
+                    query = query.Include(include);
+
             if (filter != null)
                 query = query.Where(filter);
+
             return query.FirstOrDefault();
         }
     }

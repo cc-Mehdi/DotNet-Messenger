@@ -1,62 +1,77 @@
 ﻿@page
+@model SignalRChat.Pages.IndexModel
 
+<div class="px-4 container mx-auto flex justify-center">
+    <div class="flex h-screen w-screen flex-col justify-between shadow-xl lg:w-3/4 xl:w-2/3">
 
-
-<div class="container mx-auto px-4 flex justify-center">
-    <div class="xl:w-2/3 lg:w-3/4 w-screen h-screen flex flex-col justify-between">
-
-        <header class="flex items-center justify-between bg-blue-900 px-5 rounded-b-xl">
-            <div class="flex items-center p-3">
+        <header class="bg-blue-900 px-5 flex items-center justify-between rounded-b-xl">
+            <div class="p-3 flex items-center">
                 <img src="https://tailus.io/sources/blocks/social/preview/images/icon.svg"
-                     class="rounded-full max-w-10 max-h-10" alt="user image">
+                     class="max-w-10 max-h-10 rounded-full" alt="user image">
                 <div class="flex flex-col">
-                    <span class="text-xl text-white ms-3">Group Name</span>
-                    <span class="text-md font-bold text-blue-300 ms-3">Online</span>
+                    <span class="text-white ms-3 text-xl">Group Name</span>
+                    <span class="text-md text-blue-300 ms-3 font-bold">Online</span>
                 </div>
             </div>
             <div>
-                <button class="rounded-full bg-cyan-500 shadow shadow-blue-300 p-1 hover:shadow-none transition">
-                    <i class="fa-solid fa-ellipsis text-white text-3xl w-9 h-9"></i>
+                <button class="bg-cyan-500 shadow-blue-300 p-1 rounded-full shadow transition hover:shadow-none">
+                    <i class="fa-solid fa-ellipsis text-white w-9 h-9 text-3xl"></i>
                 </button>
             </div>
         </header>
 
-        <main class="flex w-full h-3/4 overflow-auto scrollStyle">
+        <main class="scrollStyle flex h-3/4 w-full overflow-auto">
             <ul class="w-full" id="messagesList">
-                <li class="p-1 flex items-center my-1">
-                    <img src="https://avatars.githubusercontent.com/u/57840939?v=4" lazy="loading" alt="user image"
-                         class="rounded-full max-w-14 max-h-14 me-3">
-                    <div class="bg-blue-900 text-white w-fit p-2 rounded-md flex flex-col">
-                        <span class="text-blue-300 text-sm">Mehdi Gholami</span>
-                        <span class="text-lg">this is a text message for test</span>
-                    </div>
-                </li>
+
+                @if (Model.messagesList.Count() > 0)
+                {
+                    @foreach (var message in Model.messagesList)
+                    {
+                        <li class="p-1 my-1 flex items-center">
+                            <img src="https://avatars.githubusercontent.com/u/57840939?v=4" lazy="loading" alt="user image"
+                                 class="max-w-14 max-h-14 me-3 rounded-full">
+                            <div class="bg-blue-900 text-white p-2 flex w-fit flex-col rounded-md">
+                                <span class="text-blue-300 text-sm">@message.Sender.Username</span>
+                                <span class="text-lg">@message.MessageContent</span>
+                            </div>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <section class="m-auto flex h-full w-full flex-col items-center justify-center" id="noMessageBox">
+                        <img src="./media/pictures/Empty.svg" class="w-80" />
+                        <span class="text-gray-600 mt-10 text-3xl font-bold">No Messages here yet ...</span>
+                        <span class="text-gray-800 mt-2 text-lg">Write your message in below 😉</span>
+                    </section>
+                }
+
             </ul>
         </main>
 
         <footer class="bg-blue-900 p-5 rounded-t-xl">
-                <div class="flex items-end space-x-2">
-                    <!-- Textarea for multiline input -->
-                    <div class="relative flex-grow">
-                        <!-- Icon on the left -->
-                        <div class="absolute inset-y-0 start-0 flex items-end pb-3 pl-3 pointer-events-none">
-                            <i class="fa-regular fa-comments text-gray-300 dark:text-white"></i>
-                        </div>
-
-                        <!-- Textarea -->
-                        <textarea id="messageInput"
-                                  class="block w-full p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 resize-none overflow-hidden"
-                                  placeholder="Your Message" rows="1" oninput="autoResize(this)"></textarea>
+            <div class="space-x-2 flex items-end">
+                <!-- Textarea for multiline input -->
+                <div class="relative flex-grow">
+                    <!-- Icon on the left -->
+                    <div class="inset-y-0 start-0 pb-3 pl-3 pointer-events-none absolute flex items-end">
+                        <i class="fa-regular fa-comments text-gray-300 dark:text-white"></i>
                     </div>
 
-                    <!-- Button to submit -->
-                    <button type="button"
-                            id="sendButton"
-                            class="mb-1 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
-                        <span>Send</span>
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
+                    <!-- Textarea -->
+                    <textarea id="messageInput"
+                              class="p-3 pl-10 text-gray-900 border-gray-300 block w-full resize-none overflow-hidden rounded-lg border text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="Your Message" rows="1" oninput="autoResize(this)"></textarea>
                 </div>
+
+                <!-- Button to submit -->
+                <button type="button"
+                        id="sendButton"
+                        class="mb-1 text-white bg-blue-600 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                    <span>Send</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
         </footer>
     </div>
 </div>
