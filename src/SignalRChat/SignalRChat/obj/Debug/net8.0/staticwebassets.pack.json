@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\SignalRChat.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\Customers\\UserImages\\pic_profile_default.svg",
+      "PackagePath": "staticwebassets\\Customers\\UserImages\\pic_profile_default.svg"
+    },
+    {
       "Id": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

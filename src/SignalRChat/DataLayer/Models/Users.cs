@@ -27,6 +27,11 @@ namespace DataLayer.Models
         [Range(5, 300)]
         public string Password { get; set; }
 
+        [Display(Name = "Picture")]
+        [Required]
+        [Range(5, 300)]
+        public string PictureAddress { get; set; }
+
         [AllowNull]
         public bool IsDeleted { get; set; }
     }

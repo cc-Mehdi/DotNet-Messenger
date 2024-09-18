@@ -59,7 +59,6 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 //});
 
 function SendMessage(event) {
-    debugger;
     if (document.getElementById("noMessageBox").classList.contains("flex"))
         document.getElementById("noMessageBox").classList.add("hidden");
 
