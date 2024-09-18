@@ -11,17 +11,14 @@ namespace DataLayer.Repositories
         {
             _db = db;
         }
-        public bool Update(Users user)
+        public void Update(Users user)
         {
-            try
-            {
                 var objFromDb = _db.Users.FirstOrDefault(u => u.Id == user.Id);
+                objFromDb.PublicId = user.PublicId;
                 objFromDb.Username = user.Username;
                 objFromDb.Email = user.Email;
                 objFromDb.Password = user.Password;
-                return true;
-            }
-            catch { return false; }
+                objFromDb.IsDeleted = user.IsDeleted;
         }
     }
 }

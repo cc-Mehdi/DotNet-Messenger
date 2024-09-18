@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DataLayer.Models
 {
@@ -12,6 +8,10 @@ namespace DataLayer.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [Required]
+        [Range(10, 60)]
+        public string PublicId { get; set; }
 
         [ForeignKey("Users")]
         public int SenderId { get; set; }
@@ -23,5 +23,8 @@ namespace DataLayer.Models
         public string MessageContent { get; set; }
 
         public DateTime CreateDate { get; set; }
+
+        [AllowNull]
+        public bool IsDeleted { get; set; }
     }
 }

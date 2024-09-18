@@ -4,6 +4,6 @@ namespace DataLayer.Repositories.IRepositories
 {
     public interface IMessagesRepository : IRepository<Messages>
     {
-        public bool Update(Messages message);
+        public void Update(Messages message);
     }
 }

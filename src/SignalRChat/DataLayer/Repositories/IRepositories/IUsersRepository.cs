@@ -4,6 +4,6 @@ namespace DataLayer.Repositories.IRepositories
 {
     public interface IUsersRepository : IRepository<Users>
     {
-        public bool Update(Users user);
+        public void Update(Users user);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DataLayer.Models
 {
@@ -6,6 +7,10 @@ namespace DataLayer.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [Required]
+        [Range(10, 60)]
+        public string PublicId { get; set; }
 
         [Display(Name = "Username")]
         [Required]
@@ -21,5 +26,8 @@ namespace DataLayer.Models
         [Required]
         [Range(5, 300)]
         public string Password { get; set; }
+
+        [AllowNull]
+        public bool IsDeleted { get; set; }
     }
 }

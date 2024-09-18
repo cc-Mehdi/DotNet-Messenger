@@ -12,19 +12,15 @@ namespace DataLayer.Repositories
             _db = db;
         }
 
-        public bool Update(Messages message)
+        public void Update(Messages message)
         {
-            try
-            {
                 var objFromDb = _db.Messages.FirstOrDefault(u => u.Id == message.Id);
+                objFromDb.PublicId = message.PublicId;
                 objFromDb.Sender = message.Sender;
                 objFromDb.SenderId = message.SenderId;
                 objFromDb.MessageContent = message.MessageContent;
                 objFromDb.CreateDate = message.CreateDate;
-
-                return true;
-            }
-            catch { return false; }
+                objFromDb.IsDeleted = message.IsDeleted;
         }
     }
 }
