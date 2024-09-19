@@ -60,16 +60,57 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 
 function SendMessage(event) {
     debugger;
-    if (document.getElementById("noMessageBox").classList.contains("flex"))
-        document.getElementById("noMessageBox").classList.add("hidden");
 
 
-    var user = "Mehdi Gholami";
+    try {
+        if (document.getElementById("noMessageBox").classList.contains("flex"))
+            document.getElementById("noMessageBox").classList.add("hidden");
+    } catch (e) {}
+
+    var userPublicId = getCookieValue("UserToken");
+    var username;
+    var userPicture;
+
+    $.ajax({
+        url: "api/v1/users/" + userPublicId,
+        method: "GET",
+        success: function (data) {
+             username = data.username;
+             userPicture = data.pictureAddress;
+        },
+        error: function () {
+            toastr.error("در لود صفحه خطا وجود دارد", "خطا");
+        }
+    });
+        
+
     var message = document.getElementById("messageInput").value;
     document.getElementById("messageInput").value = "";
 
-    connection.invoke("SendMessage", user, message).catch(function (err) {
+    connection.invoke("SendMessage", username, userPicture, message).catch(function (err) {
         return console.error(err.toString());
     });
     event.preventDefault();
 }
+
+
+function getCookieValue(name) {
+    let nameEQ = name + "=";
+    // Retrieve all cookies
+    let cookiesArray = document.cookie.split(';');
+
+    // Loop through each cookie
+    for (let i = 0; i < cookiesArray.length; i++) {
+        let cookie = cookiesArray[i].trim(); // Remove leading/trailing spaces
+        // Debugging: Log the cookie we're inspecting
+        console.log("Checking cookie: ", cookie);
+
+        if (cookie.indexOf(nameEQ) === 0) {
+            return cookie.substring(nameEQ.length, cookie.length);
+        }
+    }
+
+    return null; // If cookie is not found
+}
+
+
