@@ -10,7 +10,8 @@ namespace DataLayer.Models
         public int Id { get; set; }
 
         [Required]
-        [Range(10, 60)]
+        [MinLength(10)]
+        [MaxLength(60)]
         public string PublicId { get; set; }
 
         [ForeignKey("Users")]
@@ -19,9 +20,12 @@ namespace DataLayer.Models
 
         [Display(Name = "MessageContent")]
         [Required(ErrorMessage = "Message can not be empty!")]
-        [Range(1, 500, ErrorMessage = "Message length is out of range!")]
+        [MinLength(1, ErrorMessage = "Message length is out of range!")]
+        [MaxLength(500, ErrorMessage = "Message length is out of range!")]
+        [DataType(DataType.MultilineText)]
         public string MessageContent { get; set; }
 
+        [DataType(DataType.DateTime)]
         public DateTime CreateDate { get; set; }
 
         [AllowNull]

@@ -15,26 +15,31 @@ namespace DataLayer.Models
         public int Id { get; set; }
 
         [Required]
-        [Range(10, 60)]
+        [MaxLength(60)]
         public string PublicId { get; set; }
 
         [Display(Name = "Username")]
         [Required]
-        [Range(5, 300)]
+        [MinLength(3, ErrorMessage = "{0} length is out of range!")]
+        [MaxLength(100, ErrorMessage = "{0} length is out of range!")]
+        [DataType(DataType.Text)]
         public string Username { get; set; }
 
         [Display(Name = "Email")]
         [Required]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Display(Name = "Password")]
         [Required]
         [MinLength(8, ErrorMessage = "Password must be minum 8 character")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [Display(Name = "Picture")]
         [Required]
-        [Range(5, 300)]
+        [MinLength(5)]
+        [MaxLength(300)]
         public string PictureAddress { get; set; }
 
         [AllowNull]

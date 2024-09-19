@@ -1,6 +1,10 @@
 ﻿@page
 @model SignalRChat.Pages.Customer.LoginModel
 @{
+    if (ViewData["Notif"] == null)
+        ViewData["Title"] = "Login - SignalRChat";
+    else
+        ViewData["Title"] = ViewData["Notif"];
 }
 
 <div class="px-12 m-auto mx-auto sm:px-0 xl:container">
@@ -63,7 +67,7 @@
                             <span class="text-white text-base font-semibold dark:text-gray-900">Login</span>
                         </button>
                         <button class="p-3 w-max">
-                            <a href="Register.html" class="p-0 m-0 text-sky-600 text-sm tracking-wide dark:text-sky-400">Create new account</a>
+                            <a asp-page="Register" class="p-0 m-0 text-sky-600 text-sm tracking-wide dark:text-sky-400">Create new account</a>
                         </button>
                     </div>
                 </form>

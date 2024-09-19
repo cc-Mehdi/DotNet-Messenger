@@ -6,14 +6,14 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace SignalRChat.Pages.Customer
 {
-    public class LoginModel : PageModel
+    public class RegisterModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
 
         [BindProperty]
         public Users User { get; set; }
 
-        public LoginModel(IUnitOfWork unitOfWork)
+        public RegisterModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
             User = new Users();
@@ -25,16 +25,14 @@ namespace SignalRChat.Pages.Customer
 
         public async Task<IActionResult> OnPostAsync()
         {
-            ModelState["User.Username"].ValidationState = ModelValidationState.Valid;
-
             if (!ModelState.IsValid)
                 return Page();
 
             try
             {
-                User = _unitOfWork.UsersRepository.GetFirstOrDefault(u => u.Email == User.Email && u.Password == User.Password);
-                if (User != null)
+                if(_unitOfWork.UsersRepository.GetFirstOrDefault(u => u.Email == User.Email) == null)
                 {
+                    // Set Cookie
                     var cookieOptions = new CookieOptions()
                     {
                         Expires = DateTime.Now.AddMinutes(20),
@@ -44,15 +42,21 @@ namespace SignalRChat.Pages.Customer
                     };
                     Response.Cookies.Append("UserToken", User.PublicId, cookieOptions);
 
+                    // Add To DB
+                    _unitOfWork.UsersRepository.Add(User);
+                    _unitOfWork.SaveAsync();
+
                     // Success
                     ViewData["Notif"] = $"Welcome {User.Username}";
                     return RedirectToPage("./../Index");
                 }
                 else
                 {
-                    ViewData["Notif"] = "Email or Password is incorrect!";
+                    // Faild
+                    ViewData["Notif"] = "Email has been registered!";
                     return Page();
                 }
+               
             }
             catch
             {

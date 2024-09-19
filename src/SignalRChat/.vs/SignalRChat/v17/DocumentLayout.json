@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\pages\\customer\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\cc-mehdi\\desktop\\dotnet-messenger\\src\\signalrchat\\signalrchat\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\cc-mehdi\\desktop\\dotnet-messenger\\src\\signalrchat\\signalrchat\\pages\\customer\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\pages\\customer\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,28 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Customer\\Login.cshtml",
+              "RelativeDocumentMoniker": "SignalRChat\\Pages\\Customer\\Login.cshtml",
+              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Customer\\Login.cshtml",
+              "RelativeToolTip": "SignalRChat\\Pages\\Customer\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-19T04:42:53.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Customer\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "SignalRChat\\Pages\\Customer\\Login.cshtml.cs",
               "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Customer\\Login.cshtml.cs",
               "RelativeToolTip": "SignalRChat\\Pages\\Customer\\Login.cshtml.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAYwAwAAAAWAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAgwCgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T19:45:37.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "SignalRChat\\Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml.cs",
-              "RelativeToolTip": "SignalRChat\\Pages\\Index.cshtml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T19:18:17.618Z",
+              "WhenOpened": "2024-09-19T04:39:42.729Z",
               "EditorCaption": ""
             }
           ]
