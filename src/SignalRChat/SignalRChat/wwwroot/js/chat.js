@@ -5,17 +5,18 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 // Disable the send button until connection is established.
 document.getElementById("sendButton").disabled = true;
 
-connection.on("ReceiveMessage", function (user, message) {
+
+function BindOtherUserMessage(user, message) {
     // Create a new list item (li)
     var li = document.createElement("li");
     li.classList.add("p-1", "flex", "items-center", "my-1");
 
     // Add user avatar
     var img = document.createElement("img");
-    img.src = "https://avatars.githubusercontent.com/u/57840939?v=4";
+    img.src = user.pictureAddress;
     img.alt = "user image";
     img.classList.add("rounded-full", "max-w-14", "max-h-14", "me-3");
-    img.loading = "lazy"; // Lazy loading attribute
+    img.loading = "lazy";
 
     // Create a container for the message
     var messageContainer = document.createElement("div");
@@ -24,7 +25,7 @@ connection.on("ReceiveMessage", function (user, message) {
     // Create and append the user element
     var userSpan = document.createElement("span");
     userSpan.classList.add("text-blue-300", "text-sm");
-    userSpan.textContent = user;  // Use textContent to avoid injecting HTML
+    userSpan.textContent = user.username;
     messageContainer.appendChild(userSpan);
 
     // Create and append the message element
@@ -39,6 +40,58 @@ connection.on("ReceiveMessage", function (user, message) {
 
     // Append the list item to the messages list
     document.getElementById("messagesList").appendChild(li);
+}
+
+function BindCurrentUserMessage(user, message) {
+    debugger;
+    // Create a new list item (li)
+    var li = document.createElement("li");
+    li.classList.add("p-1", "flex", "items-center", "my-1", "w-full", "justify-end", "p-2");
+
+    // Create a container for the message
+    var messageContainer = document.createElement("div");
+    messageContainer.classList.add("bg-blue-700", "text-white", "w-fit", "p-2", "rounded-md", "flex", "flex-col");
+
+    // Create and append the user element
+    var userSpan = document.createElement("span");
+    userSpan.classList.add("text-blue-300", "text-sm");
+    userSpan.textContent = user.username;  // Use textContent to avoid injecting HTML
+    messageContainer.appendChild(userSpan);
+
+    // Create and append the message element
+    var messageSpan = document.createElement("span");
+    messageSpan.classList.add("text-lg");
+    messageSpan.textContent = message;  // Use textContent to ensure HTML isn't executed
+    messageContainer.appendChild(messageSpan);
+
+    // Append the image and message container to the list item
+    li.appendChild(messageContainer);
+
+    document.getElementById("messagesList").appendChild(li);
+}
+
+connection.on("ReceiveMessage", function (user, message) {
+    // Fetch the UserToken cookie value using fetch
+    fetch('/api/v1/Cookies/GetCookie?cookieName=UserToken', {
+        method: 'GET',
+        credentials: 'include' // Ensure cookies are sent with the request
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text(); // Use .text() since it's not a JSON response
+        })
+        .then(userPublicId => {
+            if (userPublicId == user.publicId) {
+                BindCurrentUserMessage(user, message);
+            } else {
+                BindOtherUserMessage(user, message);
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching data:", error);
+        });
 });
 
 connection.start().then(function () {
@@ -59,58 +112,53 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 //});
 
 function SendMessage(event) {
-    debugger;
-
-
     try {
         if (document.getElementById("noMessageBox").classList.contains("flex"))
             document.getElementById("noMessageBox").classList.add("hidden");
-    } catch (e) {}
+    } catch (e) { }
 
-    var userPublicId = getCookieValue("UserToken");
-    var username;
-    var userPicture;
+    // Fetch the UserToken cookie value using fetch
+    fetch('/api/v1/Cookies/GetCookie?cookieName=UserToken', {
+        method: 'GET',
+        credentials: 'include' // Ensure cookies are sent with the request
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text(); // Use .text() since it's not a JSON response
+        })
+        .then(userPublicId => {
+            // Now that we have userPublicId, fetch the user information
+            return fetch('/api/v1/Users/GetUserByPublicId/' + userPublicId, {
+                method: 'GET',
+                credentials: 'include' // Ensure cookies are sent with the request
+            });
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json(); // Parse the response as JSON
+        })
+        .then(userData => {
+            var message = document.getElementById("messageInput").value;
+            document.getElementById("messageInput").value = "";
 
-    $.ajax({
-        url: "api/v1/users/" + userPublicId,
-        method: "GET",
-        success: function (data) {
-             username = data.username;
-             userPicture = data.pictureAddress;
-        },
-        error: function () {
-            toastr.error("در لود صفحه خطا وجود دارد", "خطا");
-        }
-    });
-        
+            connection.invoke("SendMessage", userData, message).catch(function (err) {
+                return console.error(err.toString());
+            });
+        })
+        .catch(error => {
+            console.error("Error fetching data:", error);
+        });
 
-    var message = document.getElementById("messageInput").value;
-    document.getElementById("messageInput").value = "";
 
-    connection.invoke("SendMessage", username, userPicture, message).catch(function (err) {
-        return console.error(err.toString());
-    });
+
+
+
     event.preventDefault();
 }
 
-
-function getCookieValue(name) {
-    let nameEQ = name + "=";
-    // Retrieve all cookies
-    let cookiesArray = document.cookie.split(';');
-
-    // Loop through each cookie
-    for (let i = 0; i < cookiesArray.length; i++) {
-        let cookie = cookiesArray[i].trim(); // Remove leading/trailing spaces
-        // Debugging: Log the cookie we're inspecting
-        console.log("Checking cookie: ", cookie);
-
-        if (cookie.indexOf(nameEQ) === 0) {
-            return cookie.substring(nameEQ.length, cookie.length);
-        }
-    }
-
-    return null; // If cookie is not found
-}
 
 

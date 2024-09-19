@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\cc-mehdi\\desktop\\dotnet-messenger\\src\\signalrchat\\signalrchat\\api\\v1\\users\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\api\\v1\\users\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\cc-mehdi\\desktop\\dotnet-messenger\\src\\signalrchat\\signalrchat\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
@@ -18,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "chat.js",
-              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\js\\chat.js",
-              "RelativeDocumentMoniker": "SignalRChat\\wwwroot\\js\\chat.js",
-              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\js\\chat.js",
-              "RelativeToolTip": "SignalRChat\\wwwroot\\js\\chat.js",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAAwE4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-19T15:14:10.653Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -44,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\API\\v1\\Users\\UsersController.cs",
-              "RelativeDocumentMoniker": "SignalRChat\\API\\v1\\Users\\UsersController.cs",
-              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\API\\v1\\Users\\UsersController.cs",
-              "RelativeToolTip": "SignalRChat\\API\\v1\\Users\\UsersController.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAQwF8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T11:15:41.664Z",
+              "Title": "chat.js",
+              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\js\\chat.js",
+              "RelativeDocumentMoniker": "SignalRChat\\wwwroot\\js\\chat.js",
+              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\js\\chat.js",
+              "RelativeToolTip": "SignalRChat\\wwwroot\\js\\chat.js",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwCkAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-09-19T15:14:10.653Z",
               "EditorCaption": ""
             }
           ]

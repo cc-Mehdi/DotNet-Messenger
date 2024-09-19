@@ -34,6 +34,18 @@ namespace SignalRChat.API.Users
             return user;
         }
 
+        // GET: api/Users/1234-abcd-1234-abcd
+        [HttpGet("GetUserByPublicId/{publicId}")]
+        public async Task<ActionResult<DataLayer.Models.Users>> GetUserByPublicId(string publicId)
+        {
+            var user = _unitOfWork.UsersRepository.GetFirstOrDefault(u => u.PublicId == publicId);
+
+            if (user == null)
+                return NotFound();
+
+            return user;
+        }
+
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
