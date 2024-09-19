@@ -23,8 +23,12 @@ namespace SignalRChat.Pages
         {
             if (Request.Cookies["UserToken"] == null)
             {
-                Response.Redirect("/Customer/Login");
-                return;
+                var user = _unitOfWork.UsersRepository.GetFirstOrDefault(u => u.PublicId == Request.Cookies["UserToken"]);
+                if (user == null)
+                {
+                    Response.Redirect("/Customer/Login");
+                    return;
+                }
             }
             messagesList = _unitOfWork.MessagesRepository.GetAll(new Expression<Func<Messages, object>>[] { m => m.Sender }).ToList();
         }
