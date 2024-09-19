@@ -27,12 +27,10 @@
                 {
                     @foreach (var message in Model.messagesList)
                     {
-                        if(message.SenderId == Model.User.Id)
+                        if(message.SenderId == Model.User.Id) // current user message
                         {
-                            <li class="p-1 my-1 flex items-center w-full justify-end">
-                                <img src="@message.Sender.PictureAddress" lazy="loading" alt="user image"
-                                     class="max-w-14 max-h-14 me-3 rounded-full">
-                                <div class="bg-blue-900 text-white p-2 flex w-fit flex-col rounded-md">
+                            <li class="p-2 my-1 flex w-full items-center justify-end">
+                                <div class="bg-blue-700 text-white p-2 flex w-fit flex-col rounded-md">
                                     <span class="text-blue-300 text-sm">@message.Sender.Username</span>
                                     <span class="text-lg">@message.MessageContent</span>
                                 </div>

@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mehdi.gholami\\Documents\\Temp\\DotNet-Messenger\\src\\SignalRChat\\",
+  "WorkspaceRootPath": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\mehdi.gholami\\documents\\temp\\dotnet-messenger\\src\\signalrchat\\signalrchat\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\mehdi.gholami\\documents\\temp\\dotnet-messenger\\src\\signalrchat\\signalrchat\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\mehdi.gholami\\documents\\temp\\dotnet-messenger\\src\\signalrchat\\signalrchat\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\cc-mehdi\\desktop\\dotnet-messenger\\src\\signalrchat\\signalrchat\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\cc-mehdi\\desktop\\dotnet-messenger\\src\\signalrchat\\signalrchat\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,18 +21,6 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "chat.js",
-              "DocumentMoniker": "C:\\Users\\mehdi.gholami\\Documents\\Temp\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\js\\chat.js",
-              "RelativeDocumentMoniker": "SignalRChat\\wwwroot\\js\\chat.js",
-              "ToolTip": "C:\\Users\\mehdi.gholami\\Documents\\Temp\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\js\\chat.js",
-              "RelativeToolTip": "SignalRChat\\wwwroot\\js\\chat.js",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-19T09:11:51.177Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
@@ -46,24 +30,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\mehdi.gholami\\Documents\\Temp\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "SignalRChat\\Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\mehdi.gholami\\Documents\\Temp\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "SignalRChat\\Pages\\Index.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T08:09:26.765Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\mehdi.gholami\\Documents\\Temp\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "SignalRChat\\Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\mehdi.gholami\\Documents\\Temp\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\Pages\\Index.cshtml",
               "RelativeToolTip": "SignalRChat\\Pages\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACEAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-19T08:09:24.498Z",
               "EditorCaption": ""
