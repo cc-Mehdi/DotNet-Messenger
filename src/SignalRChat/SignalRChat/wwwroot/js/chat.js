@@ -5,7 +5,6 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 // Disable the send button until connection is established.
 document.getElementById("sendButton").disabled = true;
 
-
 function BindOtherUserMessage(user, message) {
     // Create a new list item (li)
     var li = document.createElement("li");
@@ -41,9 +40,7 @@ function BindOtherUserMessage(user, message) {
     // Append the list item to the messages list
     document.getElementById("messagesList").appendChild(li);
 }
-
 function BindCurrentUserMessage(user, message) {
-    debugger;
     // Create a new list item (li)
     var li = document.createElement("li");
     li.classList.add("p-1", "flex", "items-center", "my-1", "w-full", "justify-end", "p-2");
@@ -148,17 +145,25 @@ function SendMessage(event) {
             connection.invoke("SendMessage", userData, message).catch(function (err) {
                 return console.error(err.toString());
             });
+
+            SaveMessageToDB(message);
         })
         .catch(error => {
             console.error("Error fetching data:", error);
         });
 
-
-
-
-
     event.preventDefault();
 }
 
+function SaveMessageToDB(userMessageContent) {
+    var userMessage = {
+        content: userMessageContent
+    };
 
-
+    $.ajax({
+        url: "/api/v1/messages",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(userMessage)
+    });
+}

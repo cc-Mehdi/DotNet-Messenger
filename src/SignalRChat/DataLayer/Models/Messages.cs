@@ -6,6 +6,13 @@ namespace DataLayer.Models
 {
     public class Messages
     {
+        public Messages()
+        {
+            this.PublicId = Guid.NewGuid().ToString();
+            this.CreateDate = DateTime.Now;
+            this.IsDeleted = false;
+        }
+
         [Key]
         public int Id { get; set; }
 

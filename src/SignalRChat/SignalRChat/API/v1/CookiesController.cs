@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using DataLayer.Repositories.IRepositories;
 
-namespace SignalRChat.API.Users
+namespace SignalRChat.API.v1
 {
     [Route("api/v1/[controller]")]
     [ApiController]

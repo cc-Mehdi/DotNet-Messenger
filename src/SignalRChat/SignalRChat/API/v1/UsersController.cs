@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using DataLayer.Repositories.IRepositories;
 
-namespace SignalRChat.API.Users
+namespace SignalRChat.API.v1
 {
     [Route("api/v1/[controller]")]
     [ApiController]
@@ -57,7 +57,7 @@ namespace SignalRChat.API.Users
             try
             {
                 _unitOfWork.UsersRepository.Update(user);
-                 _unitOfWork.SaveAsync();
+                _unitOfWork.SaveAsync();
             }
             catch (DbUpdateConcurrencyException)
             {

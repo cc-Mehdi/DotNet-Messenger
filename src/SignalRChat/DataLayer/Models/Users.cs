@@ -9,6 +9,7 @@ namespace DataLayer.Models
         {
             this.PublicId = Guid.NewGuid().ToString();
             this.PictureAddress = "./Customers/UserImages/pic_profile_default.svg";
+            this.IsDeleted = false;
         }
 
         [Key]
