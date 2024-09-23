@@ -11,6 +11,17 @@ namespace DataLayer.Repositories
         {
             _db = db;
         }
+
+        public void SetRole(Users user, string roleTitle)
+        {
+            var role = _db.Roles.FirstOrDefault(u => u.Title == roleTitle);
+            if (role != null)
+            {
+                user.Roles = role;
+                user.RoleId = role.Id;
+            }
+        }
+
         public void Update(Users user)
         {
                 var objFromDb = _db.Users.FirstOrDefault(u => u.Id == user.Id);

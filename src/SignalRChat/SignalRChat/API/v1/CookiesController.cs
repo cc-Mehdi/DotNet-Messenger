@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using DataLayer.Repositories.IRepositories;
 
 namespace SignalRChat.API.v1
@@ -20,13 +19,21 @@ namespace SignalRChat.API.v1
         [HttpGet("GetCookie")]
         public ActionResult<string> GetCookie(string cookieName)
         {
-            // Try to get the cookie from the Request object
-            if (Request.Cookies.TryGetValue(cookieName, out string cookieValue))
-                // Return the cookie value if it exists
-                return Ok(cookieValue);
+            try
+            {
+                // Try to get the cookie from the Request object
+                if (Request.Cookies.TryGetValue(cookieName, out string cookieValue))
+                    // Return the cookie value if it exists
+                    return Ok(cookieValue);
 
-            // Return NotFound if the cookie is not present
-            return NotFound("Cookie not found.");
+                // Return NotFound if the cookie is not present
+                return NotFound("Cookie not found.");
+            }
+            catch (Exception ex)
+            {
+                // Return NotFound if the cookie is not present
+                return NotFound("Something was wrong\n" + ex.Message);
+            }
         }
 
         // POST: api/v1/Cookies/SetCookie

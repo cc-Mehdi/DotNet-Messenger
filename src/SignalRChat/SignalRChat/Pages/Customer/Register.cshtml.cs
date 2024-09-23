@@ -3,6 +3,7 @@ using DataLayer.Repositories.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using DataLayer.Context;
 
 namespace SignalRChat.Pages.Customer
 {
@@ -23,8 +24,9 @@ namespace SignalRChat.Pages.Customer
         {
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPostAsync()
         {
+            ModelState["User.Roles"].ValidationState = ModelValidationState.Valid;
             if (!ModelState.IsValid)
                 return Page();
 
@@ -42,9 +44,12 @@ namespace SignalRChat.Pages.Customer
                     };
                     Response.Cookies.Append("UserToken", User.PublicId, cookieOptions);
 
+                    // Set Role For User
+                    _unitOfWork.UsersRepository.SetRole(User, "User");
+
                     // Add To DB
                     _unitOfWork.UsersRepository.Add(User);
-                    _unitOfWork.SaveAsync();
+                    _unitOfWork.Save();
 
                     // Success
                     ViewData["Notif"] = $"Welcome {User.Username}";

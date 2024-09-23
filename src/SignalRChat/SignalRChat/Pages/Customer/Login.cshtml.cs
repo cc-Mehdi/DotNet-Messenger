@@ -26,6 +26,7 @@ namespace SignalRChat.Pages.Customer
         public async Task<IActionResult> OnPostAsync()
         {
             ModelState["User.Username"].ValidationState = ModelValidationState.Valid;
+            ModelState["User.Roles"].ValidationState = ModelValidationState.Valid;
 
             if (!ModelState.IsValid)
                 return Page();
