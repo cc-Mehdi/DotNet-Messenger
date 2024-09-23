@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\cc-mehdi\\desktop\\dotnet-messenger\\src\\signalrchat\\signalrchat\\api\\v1\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\api\\v1\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|c:\\users\\cc-mehdi\\desktop\\dotnet-messenger\\src\\signalrchat\\signalrchat\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{EB99F435-05FD-4D4C-950E-B03C549A3F6B}|SignalRChat\\SignalRChat.csproj|solutionrelative:signalrchat\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\DataLayer\\Migrations\\20240923175711_AddRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataLayer\\Migrations\\20240923175711_AddRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MessagesController.cs",
-              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\API\\v1\\MessagesController.cs",
-              "RelativeDocumentMoniker": "SignalRChat\\API\\v1\\MessagesController.cs",
-              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\API\\v1\\MessagesController.cs",
-              "RelativeToolTip": "SignalRChat\\API\\v1\\MessagesController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAA7wFYAAABIAAAA",
+              "Title": "20240923175711_AddRole.cs",
+              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\DataLayer\\Migrations\\20240923175711_AddRole.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Migrations\\20240923175711_AddRole.cs",
+              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\DataLayer\\Migrations\\20240923175711_AddRole.cs",
+              "RelativeToolTip": "DataLayer\\Migrations\\20240923175711_AddRole.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T21:00:10.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "chat.js",
-              "DocumentMoniker": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\js\\chat.js",
-              "RelativeDocumentMoniker": "SignalRChat\\wwwroot\\js\\chat.js",
-              "ToolTip": "C:\\Users\\cc-mehdi\\Desktop\\DotNet-Messenger\\src\\SignalRChat\\SignalRChat\\wwwroot\\js\\chat.js",
-              "RelativeToolTip": "SignalRChat\\wwwroot\\js\\chat.js",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAQwJ0AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-19T20:12:49.462Z",
+              "WhenOpened": "2024-09-23T17:57:11.696Z",
               "EditorCaption": ""
             }
           ]

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DataLayer.Models
@@ -45,5 +46,9 @@ namespace DataLayer.Models
 
         [AllowNull]
         public bool IsDeleted { get; set; }
+
+        [ForeignKey("Roles")]
+        public int RoleId { get; set; }
+        public Roles Roles { get; set; }
     }
 }
