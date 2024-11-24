@@ -24,9 +24,8 @@
 ## Getting Started
 
 ### Prerequisites
-- .NET 6 SDK or later
+- .NET 8 SDK or later
 - Visual Studio 2022 (or your preferred IDE)
-- Node.js (for package management of frontend dependencies)
   
 ### Installation
 
