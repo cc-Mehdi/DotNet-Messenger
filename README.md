@@ -19,7 +19,7 @@
 - **SignalR** - Real-time bi-directional communication
 - **Entity Framework Core** - Data access and ORM (Optional if using a database for message persistence)
 - **JavaScript/TypeScript** - Frontend scripting
-- **Bootstrap/CSS** - Frontend styling
+- **Tailwind/CSS** - Frontend styling
 
 ## Getting Started
 
