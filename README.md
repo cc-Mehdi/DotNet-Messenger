@@ -5,7 +5,11 @@
 **DotNet-Messenger** is a real-time messaging application built using ASP.NET Core and SignalR. It allows users to send and receive messages instantly. SignalR enables real-time web functionality, facilitating bi-directional communication between server and client. This project showcases how to integrate SignalR into an ASP.NET Core application for building a simple yet functional chat application.
 
 ## Pictures
-![sample picture 1](https://github.com/user-attachments/assets/4bd38b29-5c1c-4f64-bebc-2db734fba045)
+![image](https://github.com/user-attachments/assets/8e321dc3-4b3f-438e-af4a-6fa59c158930)
+![image](https://github.com/user-attachments/assets/d661e06c-f06f-4f8a-9dbd-8fffb2b9b670)
+![image](https://github.com/user-attachments/assets/14c58768-dc86-479c-8bb1-1a1a58964bc4)
+
+
 
 
 ### Features:
